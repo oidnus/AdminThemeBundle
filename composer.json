@@ -16,7 +16,10 @@
         "php": ">=5.5.9",
         "symfony/symfony": "3.0.*",
         "almasaeed2010/adminlte" :"~2.0",
-        "symfony/assetic-bundle": "^2.7"
+        "symfony/assetic-bundle": "^2.7",
+        "twitter/bootstrap": "3.3.x-dev",
+        "components/jqueryui": "2.2",
+        "components/font-awesome": "4.5.0"
 
     },
     "require-dev" : {
