@@ -18,7 +18,7 @@
         "almasaeed2010/adminlte" :"~2.0",
         "symfony/assetic-bundle": "^2.7",
         "twitter/bootstrap": "3.3.x-dev",
-        "components/jqueryui": "2.2",
+        "components/jqueryui": "1.11.4",
         "components/font-awesome": "4.5.0"
 
     },
