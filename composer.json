@@ -1,0 +1,27 @@
+{
+    "name": "oidnus/admin-theme-bundle",
+    "type": "symfony-bundle",
+    "keywords": ["symfony3", "adminlte", "admin"],
+    "description": "AdminTheme for Symfony3 with AdminLTE Theme",
+    "homepage": "https://github.com/oidnus/AdminThemeBundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Damian Ślimak",
+            "email": "oidnus@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/symfony": "3.0.*"
+    },
+    "require-dev" : {
+        "mockery/mockery"          : "0.9.*@dev",
+        "hamcrest/hamcrest-php"    : "dev-master"
+    },
+    "autoload": {
+        "psr-4": { "Oidnus\\AdminThemeBundle\\": "" }
+    },
+    "target-dir": "oidnus/AdminTheme"
+}
