@@ -2,7 +2,7 @@
     "name": "oidnus/admin-theme-bundle",
     "type": "symfony-bundle",
     "keywords": ["symfony3", "adminlte", "admin"],
-    "description": "AdminTheme for Symfony3 with AdminLTE Theme",
+    "description": "AdminTheme for Symfony3 with AdminLTE Theme.",
     "homepage": "https://github.com/oidnus/AdminThemeBundle",
     "license": "MIT",
     "authors": [
