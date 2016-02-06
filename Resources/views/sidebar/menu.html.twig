@@ -1,0 +1,6 @@
+{% import "OidnusAdminThemeBundle:layout:macro.html.twig" as macro %}
+<ul class="sidebar-menu">
+    {% for item in menu %}
+        {{ macro.menu_item(item) }}
+    {% endfor %}
+</ul>

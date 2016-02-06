@@ -1,4 +1,13 @@
+parameters:
+#    oidnus_admin_theme_bundle.menu_listener.class: Oidnus\AdminThemeBundle\EventListener\MyMenuItemListListener
+
 services:
 #    oidnus_admin_theme.example:
 #        class: Oidnus\AdminThemeBundle\Example
 #        arguments: ["@service_id", "plain_value", %parameter%]
+
+#    oidnus_admin_theme_bundle.menu_listener:
+#        class: %oidnus_admin_theme_bundle.menu_listener.class%
+#        tags:
+#            - { name: kernel.event_listener, event:theme.sidebar_setup_menu, method:onSetupMenu }
+

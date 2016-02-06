@@ -1,3 +1,2 @@
 oidnus_admin_theme_homepage:
-    path:     /
-    defaults: { _controller: OidnusAdminThemeBundle:Default:index }
+  path: /
