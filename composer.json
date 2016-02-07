@@ -18,7 +18,8 @@
     },
     "require-dev" : {
         "mockery/mockery"          : "0.9.*@dev",
-        "hamcrest/hamcrest-php"    : "dev-master"
+        "hamcrest/hamcrest-php"    : "dev-master",
+        "symfony/event-dispatcher" : "3.0.*"
     },
     "autoload": {
         "psr-4": { "Oidnus\\AdminThemeBundle\\": "" }

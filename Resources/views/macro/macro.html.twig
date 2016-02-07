@@ -1,0 +1,21 @@
+{% macro box_open(title,type,remove,collapse) %}
+<div class="box box-{{ type|default('primary') }} box-solid">
+    <div class="box-header with-border">
+        <h3 class="box-title">{{ title|default('') }}</h3>
+
+        <div class="box-tools pull-right">
+            {% if remove == true %}
+                <button type="button" class="btn btn-box-tool"  data-widget="remove" ><i class="fa fa-times"></i></button>
+            {% endif %}
+            {% if collapse == true %}
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+            {% endif %}
+        </div>
+    </div>
+    <div class="box-body">
+        {% endmacro %}
+
+        {% macro box_close() %}
+    </div>
+</div>
+{% endmacro %}

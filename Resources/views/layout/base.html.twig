@@ -1,5 +1,6 @@
-
 <!DOCTYPE html>
+{% import "OidnusAdminThemeBundle:layout:macro.html.twig" as macro %}
+{% import "OidnusAdminThemeBundle:macro:macro.html.twig" as macro %}
 <html>
 <head>
     <meta charset="utf-8">
@@ -30,7 +31,7 @@
     <link rel="stylesheet" href="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/daterangepicker/daterangepicker-bs3.css') }}">
     <!-- bootstrap wysihtml5 - text editor -->
     <link rel="stylesheet" href="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css') }}">
-
+    {% block stylesheet %}{% endblock %}
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,8 +77,8 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
             <h1>
-                {% block body_title %}{% endblock %}
-                <small>{% block body_subtitle %}{% endblock %}</small>
+                {% block page_title %}{% endblock %}
+                <small>{% block page_subtitle %}{% endblock %}</small>
             </h1>
             {#{{ render(controller('OidnusAdminThemeBundle:Breadcrumb:breadcrumb')) }}#}
         </section>
@@ -281,18 +282,20 @@
 <script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/knob/jquery.knob.js') }}"></script>
 <!-- daterangepicker -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
-<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/daterangepicker/daterangepicker.js') }}"></script>
 <!-- datepicker -->
-<script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+<script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/datepicker/bootstrap-datepicker.js') }}"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js') }}"></script>
 <!-- Slimscroll -->
-<script src="plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/slimScroll/jquery.slimscroll.min.js') }}"></script>
 <!-- FastClick -->
-<script src="plugins/fastclick/fastclick.min.js"></script>
+<script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/fastclick/fastclick.min.js') }}"></script>
 <!-- AdminLTE App -->
 <script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/dist/js/app.min.js') }}"></script>
 <!-- iCheck -->
 <script src="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/plugins/iCheck/icheck.min.js') }}"></script>
+{% block javascript%}{% endblock %}
+
 </body>
 </html>
