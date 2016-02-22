@@ -8,7 +8,9 @@
     <title>{{ theme.title|striptags }}</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <!-- Bootstrap 3.3.5 -->
+
     <link rel="stylesheet" href="{{ asset('bundles/oidnusadmintheme/AdminLTE-2.3.0/bootstrap/css/bootstrap.css') }}" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('bundles/oidnusadmintheme/font-awesome-4.5.0/css/font-awesome.css') }}">
@@ -44,7 +46,7 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+<body class="hold-transition skin-purple sidebar-mini">
 <div class="wrapper">
 
     <header class="main-header">
@@ -80,19 +82,33 @@
     <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <h1>
-                {% block page_title %}{% endblock %}
-                <small>{% block page_subtitle %}{% endblock %}</small>
-            </h1>
-            {#{{ render(controller('OidnusAdminThemeBundle:Breadcrumb:breadcrumb')) }}#}
-        </section>
-
+        {% if block('page_title') %}
+            <section class="content-header">
+                <h1>
+                    {% block page_title %}{% endblock %}
+                    <small>{% block page_subtitle %}{% endblock %}</small>
+                </h1>
+                {#{{ render(controller('OidnusAdminThemeBundle:Breadcrumb:breadcrumb')) }}#}
+            </section>
+        {% endif %}
         <section class="content">
+            {% for type, messages in app.session.flashbag.all() %}
+                {% for message in messages %}
+                    <div class="alert alert-{{ type }} alert-dismissible flashbag" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endfor %}
+
             {% block page_content %}
             {% endblock page_content %}
         </section>
     </div><!-- /.content-wrapper -->
+
+
     <footer class="main-footer">
         <div class="pull-right hidden-xs">
             {{ theme.footer.right|raw }}

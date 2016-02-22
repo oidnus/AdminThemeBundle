@@ -1,5 +1,6 @@
-{% macro box_open(title,type,remove,collapse) %}
-<div class="box box-{{ type|default('primary') }} box-solid">
+{% macro box_open(title,type,remove=false,collapse=false) %}
+<div class="box {% if (type!='') %}box-{{ type }}{% endif %} ">
+    {% if title!=null or remove!=false or collapse!=false %}
     <div class="box-header with-border">
         <h3 class="box-title">{{ title|default('') }}</h3>
 
@@ -12,6 +13,7 @@
             {% endif %}
         </div>
     </div>
+    {% endif %}
     <div class="box-body">
         {% endmacro %}
 
