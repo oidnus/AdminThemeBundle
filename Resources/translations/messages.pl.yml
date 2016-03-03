@@ -1,0 +1,5 @@
+admin:
+    navbar:
+        user:
+            profile: "Profil"
+            logout: "Wyloguj"
